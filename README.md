@@ -2,7 +2,7 @@
 
 A falling-block puzzle game in the style of Tetris, built around a new piece randomizer. Vanilla JavaScript, no dependencies, no build step.
 
-![Action Shot](https://github.com/skrodahl/showpiece/blob/main/screenshots/showpiece.png)
+![Action Shot](screenshots/showpiece.png)
 
 ## Background
 
