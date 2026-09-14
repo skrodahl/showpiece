@@ -4,13 +4,13 @@ A falling-block puzzle game in the style of Tetris, built around a new piece ran
 
 ## Background
 
-I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and draughts, but not stray into completely random territory over time. 
+I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and droughts, but not stray into completely random territory over time.
 
-What I came up with is, to my knowledge, a new way of randomizing the pieces while still keeping it fair. I called it "The Sliding 21-Bag". Then I looked at the principle behind it, and made it more generic. You'll find the specifics in [RANDOMIZER.md](RANDOMIZER.md).
+What I came up with is, to my knowledge, a new way of randomizing the pieces while still keeping it fair. I called it "the sliding 21-bag". Then I looked at the principle behind it, and made it more generic. You'll find the specifics in [RANDOMIZER.md](RANDOMIZER.md).
 
-This project gives you a showpiece of the randomizer (hence the name *Showpiece*) in a real game. Complete with a statistics overlay and some other neat features. 
+This project gives you a showpiece of the randomizer (hence the name *Showpiece*) in a real game. Complete with a statistics overlay and some other neat features.
 
-The spec for this game was written by Claude Sonnet 5, the implementation was done on my local Qwen 3.8 27B NVFP4 instance. Everything, except this intro, has been vibe coded and/or AI generated.
+The spec for this game was written by Claude Sonnet 5, the implementation was done on my local Qwen 3.8 27B NVFP4 instance. Everything, except this Background section, has been vibe coded and/or AI generated.
 
 ## The sliding 21-bag
 
