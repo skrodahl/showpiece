@@ -1,0 +1,15 @@
+{
+  "name": "showpiece",
+  "version": "1.0.0",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "description": "Falling-block puzzle game built around the sliding-bag randomizer. Vanilla JS, canvas, WebAudio. No dependencies.",
+  "scripts": {
+    "test": "node tests/game-test.js && node tests/smoke.js && node tests/music-test.js && node tests/hold-flash-test.js && node tests/analytics-test.js",
+    "stats": "node tests/i-pieces.js",
+    "stats:compare": "node tests/randomizer-compare.js",
+    "stats:pools": "node tests/randomizer-pool-size.js",
+    "stats:floods": "node tests/randomizer-floods.js",
+    "stats:variants": "node tests/randomizer-variants.js"
+  }
+}

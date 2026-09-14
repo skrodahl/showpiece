@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Showpiece</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<main class="stage">
+  <header class="masthead">
+    <div class="logo-block">
+      <h1 class="logo">SHOWPIECE</h1>
+      <span class="tag">sliding-bag edition</span>
+    </div>
+    <button id="musicBtn" class="icon-btn" aria-label="Toggle music">&#9834; MUSIC</button>
+    <button id="soundBtn" class="icon-btn" aria-label="Toggle sound">&#9835; SOUND</button>
+  </header>
+
+  <section class="playfield" id="playfield">
+    <aside class="panel left">
+      <div class="card" id="holdCard">
+        <h2>Hold</h2>
+        <canvas id="holdCanvas"></canvas>
+      </div>
+      <div class="card stats">
+        <h2>Score</h2>
+        <div class="score" id="scoreVal">0</div>
+        <div class="stat-row"><span>Best</span><span id="bestVal">0</span></div>
+        <div class="stat-row"><span>Lines</span><span id="linesVal">0</span></div>
+        <div class="stat-row"><span>Level</span><span id="levelVal">1</span></div>
+      </div>
+      <div class="card controls" id="controlsCard">
+        <h2>Controls</h2>
+        <div class="ctl"><kbd>&larr;</kbd><kbd>&rarr;</kbd><span>Move</span></div>
+        <div class="ctl"><kbd>&darr;</kbd><span>Soft drop</span></div>
+        <div class="ctl"><kbd>&uarr;</kbd><kbd>X</kbd><span>Rotate CW</span></div>
+        <div class="ctl"><kbd>Z</kbd><span>Rotate CCW</span></div>
+        <div class="ctl"><kbd>Space</kbd><span>Hard drop</span></div>
+        <div class="ctl"><kbd>C</kbd><kbd>Shift</kbd><span>Hold</span></div>
+        <div class="ctl"><kbd>P</kbd><span>Pause</span></div>
+        <div class="ctl"><kbd>K</kbd><span>Music</span></div>
+        <div class="ctl"><kbd>A</kbd><span>Analytics</span></div>
+      </div>
+    </aside>
+
+    <div class="board-wrap" id="boardWrap">
+      <canvas id="board"></canvas>
+      <div class="overlay" id="overlay" hidden></div>
+    </div>
+
+    <aside class="panel right">
+      <div class="card" id="nextCard">
+        <h2>Next</h2>
+        <canvas id="nextCanvas"></canvas>
+      </div>
+      <div class="card settings">
+        <h2>Settings</h2>
+        <label class="set-row col">
+          <span>Randomizer</span>
+          <select id="randSel">
+            <option value="sliding">Sliding bag</option>
+            <option value="seven">7-bag</option>
+            <option value="random">Pure random</option>
+          </select>
+        </label>
+        <div id="slidingOpts">
+          <label class="set-row col">
+            <span>Pool</span>
+            <select id="poolSel">
+              <option value="2">14 (n=2)</option>
+              <option value="3">21 (n=3)</option>
+              <option value="4">28 (n=4)</option>
+            </select>
+          </label>
+          <label class="set-row col">
+            <span>Refill</span>
+            <select id="refillSel"></select>
+          </label>
+          <div class="set-note" id="boundsNote"></div>
+        </div>
+        <label class="set-row col">
+          <span>Preview</span>
+          <select id="previewSel">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </label>
+        <label class="set-row">
+          <span>Wall kicks</span>
+          <span class="switch"><input type="checkbox" id="kicksChk"><i></i></span>
+        </label>
+        <label class="set-row">
+          <span>Analytics</span>
+          <span class="switch"><input type="checkbox" id="analyticsChk"><i></i></span>
+        </label>
+        <button id="newGameBtn" class="btn">New game</button>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<aside class="analytics" id="analytics" hidden></aside>
+<script src="game.js"></script>
+</body>
+</html>
