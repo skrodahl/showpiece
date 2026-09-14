@@ -4,7 +4,9 @@ A falling-block puzzle game in the style of Tetris, built around a new piece ran
 
 ## Background
 
-I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and draughts, but not stray into completely random territory over time. What I came up with is, to my knowledge, a new way of randomizing the pieces while still keeping it fair. I called it "The Sliding 21-Bag". Then I looked at the principle behind it, and made it more generic. You'll find the specifics in [RANDOMIZER.md](RANDOMIZER.md).
+I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and draughts, but not stray into completely random territory over time. 
+
+What I came up with is, to my knowledge, a new way of randomizing the pieces while still keeping it fair. I called it "The Sliding 21-Bag". Then I looked at the principle behind it, and made it more generic. You'll find the specifics in [RANDOMIZER.md](RANDOMIZER.md).
 
 What you'll find here is a showpiece of the randomizer (hence the name *Showpiece*) in a real game. Complete with a statistics overlay and some other neat features. 
 
