@@ -2,6 +2,8 @@
 
 A falling-block puzzle game in the style of Tetris, built around a new piece randomizer. Vanilla JavaScript, no dependencies, no build step.
 
+![Action Shot](https://github.com/skrodahl/showpiece/blob/main/screenshots/showpiece.png)
+
 ## Background
 
 I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and droughts, but not stray into completely random territory over time.
@@ -11,8 +13,6 @@ What I came up with is, to my knowledge, a new way of randomizing the pieces whi
 This project gives you a showpiece of the randomizer (hence the name *Showpiece*) in a real game. Complete with a statistics overlay and some other neat features.
 
 The spec for this game was written by Claude Sonnet 5, the implementation was done on my local Qwen 3.8 27B NVFP4 instance. Everything, except this Background section, has been vibe coded and/or AI generated.
-
-![Action Shot](https://github.com/skrodahl/showpiece/blob/main/screenshots/showpiece.png)
 
 ## The sliding 21-bag
 
