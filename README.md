@@ -12,6 +12,8 @@ This project gives you a showpiece of the randomizer (hence the name *Showpiece*
 
 The spec for this game was written by Claude Sonnet 5, the implementation was done on my local Qwen 3.8 27B NVFP4 instance. Everything, except this Background section, has been vibe coded and/or AI generated.
 
+![Action Shot](https://github.com/skrodahl/showpiece/blob/main/Screenshots/showpiece.png)
+
 ## The sliding 21-bag
 
 Modern Tetris games deal pieces from a **7-bag**, where every 7 pieces contain one of each. It's fair, but mechanical: no streaks, no dry spells. **Pure random** has variety, but no memory, so piece counts drift further from fair the longer you play.
