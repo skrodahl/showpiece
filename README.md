@@ -1,6 +1,6 @@
 # Showpiece
 
-A falling-block puzzle game in the style of Tetris, built around a new piece randomizer. Vanilla JavaScript, no dependencies, no build step.
+A falling-block puzzle game in the style of Tetris, built around the sliding bag randomizer. Vanilla JavaScript, no dependencies, no build step.
 
 ![Action Shot](screenshots/showpiece.png)
 
@@ -8,11 +8,9 @@ A falling-block puzzle game in the style of Tetris, built around a new piece ran
 
 I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and droughts, but not stray into completely random territory over time.
 
-What I came up with is, to my knowledge, a new way of randomizing the pieces while still keeping it fair. I called it "the sliding 21-bag". Then I looked at the principle behind it, and made it more generic. You'll find the specifics in [RANDOMIZER.md](RANDOMIZER.md), which shows that this method holds its own among the randomizers that I'm aware of.
-
 This project gives you a showpiece of the randomizer (hence the name *Showpiece*) in a real game. Complete with a statistics overlay and some other neat features.
 
-The spec for this game was written by Claude Sonnet 5, the implementation was done on my local Qwen 3.8 27B NVFP4 instance. Everything, except this Background section, has been vibe coded and/or AI generated.
+The spec for this game was written by Claude Sonnet 5, the implementation was done on my local Qwen 3.8 27B NVFP4 instance. Everything, except the Background and *Is it new?* sections, has been vibe coded and/or AI generated.
 
 ## The sliding 21-bag
 
@@ -31,6 +29,10 @@ What that gives you:
 - **Self-correction:** the longer you wait for a piece, the more copies of it build up in the pool. Droughts often end in a flood.
 
 [RANDOMIZER.md](RANDOMIZER.md) has the exact limits, comparisons with the 7-bag, NES and TGM randomizers, and scripts that reproduce every number.
+
+## Is it new?
+
+I came up with what I called "the sliding 21-bag", thinking it was new. It turns out others had the same idea before me, the earliest in 2015, but it never caught on or got a proper analysis. [RANDOMIZER.md](RANDOMIZER.md) is my attempt at that, and [RANDOMIZER-RESEARCH.md](RANDOMIZER-RESEARCH.md) credits the earlier work. The research is not exhaustive, but this is it, as far as I can find. Either way, the documentation shows that the sliding bag does earn its spot, with some unique properties.
 
 ## Play
 

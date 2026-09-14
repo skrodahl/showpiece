@@ -26,6 +26,8 @@ Each of the established randomizers compared in section 4 is either fair over ti
 
 The sliding 21-bag is the only one of these that is both. Section 4 has the full numbers.
 
+The mechanism itself has been proposed independently several times since 2015 (section 8). This document adds the exact limits, the comparisons and the analysis of the whole family.
+
 ---
 
 ## 1. The algorithm
@@ -268,15 +270,31 @@ Two variations **don't work**, and both were tested:
 
 ---
 
-## 8. Related work
+## 8. Prior art and related work
 
-As of September 2026 I found no published description of the sliding members of this family (*k* < *n*) at any pool size: a pool with several copies of each piece, drawn without replacement, topped up with complete sets on a fixed schedule before it empties, regardless of what was dealt. The closed members (*k* = *n*: the 7-bag, 14-bag and larger bags) are well known. The closest relatives are:
+The mechanism is not new. A pool with several copies of each piece, drawn without replacement and topped up with complete sets on a fixed schedule before it empties, has been described or built independently at least four times before this document:
+
+| When | Who, where | What | Setting |
+|---|---|---|---|
+| Mar 2015 | Ilmari Karonen, [Game Development Stack Exchange](https://gamedev.stackexchange.com/a/95696) | Described for coin flips, with its hard limit | 2 types: 20 of each, 10 of each added when 20 remain |
+| May 2015 | Okey_Dokey, [Hard Drop forums](https://harddrop.com/forums/index.php?topic=7323.15) | Proposed as a Tetris randomizer, with [Java code](https://pastebin.com/Nxh3aBRh) | *n* = 2, *k* = 1: "Add 7 pieces to bag when 7 pieces are left in the bag" |
+| Sep 2019 | PavlikPaja, [Hacker News](https://news.ycombinator.com/item?id=20877468) | Proposed as a Tetris randomizer | *n* = 5, *k* = 1: "every time 7 pieces are dealt, you add a whole set to the bag" |
+| Sep 2024 | Strophox, [tetrs](https://github.com/Strophox/tetro-tui) (Rust) | Implemented as a general `Stock` generator, later shipped in the `falling-tetromino-engine` crate | Any *n* and *k*; *n* = 3, *k* = 2 was benchmarked |
+
+None of these names the mechanism, analyses it in depth, or led to it becoming a known randomizer, and none of them uses *n* = 3, *k* = 1. The earlier sources give estimates at most. Okey_Dokey put the longest drought for *n* = 2, *k* = 1 at "around 60 pieces", and section 6 gives the exact figure as 61. What this document adds is:
+
+- the exact limits and the general formulas for every *n* and *k*
+- the comparison with established randomizers
+- the analysis of floods after droughts
+- the tested variants that don't work
+
+Other close relatives:
 
 - **TGM3's 35-piece pool:** also a pool that refills as it goes. Its refill is chosen by drought to *reduce* streaks, and it adds history-based rerolls.
-- **Multi-copy closed bags** (the 14-bag and similar variants): several copies of each piece, but refilled only when the bag is empty, so they behave like a larger 7-bag.
-- **Casino continuous shuffling machines:** a card shoe that is topped up with used cards while dealing continues. The structure is similar, but it is a different field.
+- **Multi-copy closed bags** (the 14-bag, The New Tetris' 63-bag): several copies of each piece, but refilled only when the bag is empty, so they behave like a larger 7-bag.
+- **Clinical trial randomization**, which has the same problem: assigning patients to treatments unpredictably while keeping the groups balanced. The **block urn design** (Zhao & Weng, 2011) uses the same urn and returns one of each treatment. It refills only once every treatment has been drawn again, though, so a missing treatment can never build up copies. The **mass weighted urn design** (Zhao, 2015) has the same fixed refill, but adds it as fractional weight after every draw rather than as whole pieces every 7 draws.
 
-The search covered the Tetris wikis as far as they could be reached, the source code of open-source clones (Techmino, NullpoMino), and general web search. An informal implementation could exist somewhere without having been published.
+[RANDOMIZER-RESEARCH.md](RANDOMIZER-RESEARCH.md) has the full search, with quotes, code excerpts, dates and near misses.
 
 ---
 
