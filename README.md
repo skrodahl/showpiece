@@ -6,7 +6,7 @@ A falling-block puzzle game in the style of Tetris, built around the sliding bag
 
 ## Background
 
-I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and droughts, but not stray into completely random territory over time. This is the only randomizer I've seen that is both streaky and fair over time, so it does really earn its spot.
+I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and droughts, but not stray into completely random territory over time. The sliding bag is the only randomizer I've seen that is both streaky and fair over time, so it does really earn its spot.
 
 This project gives you a showpiece of the randomizer (hence the name *Showpiece*) in a real game. Complete with a statistics overlay and some other neat features.
 
@@ -32,7 +32,7 @@ What that gives you:
 
 ## Is it new?
 
-I came up with what I called "the sliding 21-bag", thinking it was new. It turns out others had the same idea before me, the earliest in 2015, but it never caught on or got a proper analysis. [RANDOMIZER.md](RANDOMIZER.md) is my attempt at that, and [RANDOMIZER-RESEARCH.md](RANDOMIZER-RESEARCH.md) credits the earlier work. The research is not exhaustive, but this is it, as far as I can find. Either way, the documentation shows that the sliding bag does earn its spot, with some unique properties.
+I came up with what I called "the sliding 21-bag", thinking it was new. It turns out others had the same idea before me, the earliest in 2015, but it never caught on or got a proper analysis. [RANDOMIZER.md](RANDOMIZER.md) is my attempt at that, and [RANDOMIZER-RESEARCH.md](RANDOMIZER-RESEARCH.md) credits the earlier work. The research is not exhaustive, but this is it, as far as I can find.
 
 ## Play
 
