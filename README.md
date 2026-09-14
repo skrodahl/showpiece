@@ -2,6 +2,14 @@
 
 A falling-block puzzle game in the style of Tetris, built around a new piece randomizer. Vanilla JavaScript, no dependencies, no build step.
 
+## Background
+
+I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and draughts, but not stray into completely random territory over time. What I came up with is, to my knowledge, a new way of randomizing the pieces while still keeping it fair. I called it "The Sliding 21-Bag". Then I looked at the principle behind it, and made it more generic. You'll find the specifics in [RANDOMIZER.md](RANDOMIZER.md).
+
+What you'll find here is a showpiece of the randomizer (hence the name *Showpiece*) in a real game. Complete with a statistics overlay and some other neat features. 
+
+The spec for this game was written by Claude Sonnet 5, the implementation was done on my local Qwen 3.8 27B NVFP4 instance. Everything, except this intro, has been vibe coded and/or AI generated.
+
 ## The sliding 21-bag
 
 Modern Tetris games deal pieces from a **7-bag**, where every 7 pieces contain one of each. It's fair, but mechanical: no streaks, no dry spells. **Pure random** has variety, but no memory, so piece counts drift further from fair the longer you play.

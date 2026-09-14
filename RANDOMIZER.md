@@ -15,6 +15,17 @@ The result falls between the 7-bag and pure random:
 
 Unlike pure random, it pulls itself back to fair. The longer you wait for a piece, the more copies of it build up in the pool. When the drought ends, a flood of that piece often follows.
 
+### Where it fits
+
+Each of the established randomizers compared in section 4 is either fair over time or streaky in the short term, but none is both:
+
+| | **Fair over time** (counts have a hard limit) | **Drifts** (counts have no limit) |
+|---|---|---|
+| **Streaky** (triples in 28–44% of 7-piece windows) | **Sliding 21-bag** | Pure random, NES |
+| **Smooth** (triples in 0–10% of 7-piece windows) | 7-bag, 14-bag | TGM1, TGM2, TGM3 |
+
+The sliding 21-bag is the only one of these that is both. Section 4 has the full numbers.
+
 ---
 
 ## 1. The algorithm
