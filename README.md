@@ -6,9 +6,11 @@ A falling-block puzzle game in the style of Tetris, built around the sliding bag
 
 ## Background
 
-I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and droughts, but not stray into completely random territory over time. The sliding bag is the only randomizer I've seen that is both streaky and fair over time, so it does really earn its spot. If you prefer the official 7-bag or completely random, we've got you covered.
+I love Tetris-style games. The thing is, I think random pieces are too unforgiving. The 7-bag randomizer, on the other hand, is too predictable. I wanted a randomizer that can give both bursts and droughts, but not stray into completely random territory over time. The sliding bag is the only randomizer I've seen that is both streaky and fair over time, so it does really earn its spot. 
 
 This project gives you a showpiece of the randomizer (hence the name *Showpiece*) in a real game. Complete with a statistics overlay and some other neat features.
+
+If you prefer the standard 7-bag randomizer, or if you want the pieces to arrive completely randomly, we've got you covered.
 
 The spec for this game was written by Claude Sonnet 5, the implementation was done on my local Qwen 3.8 27B NVFP4 instance. Everything, except the Background and *Is it new?* sections, has been vibe coded and/or AI generated.
 
